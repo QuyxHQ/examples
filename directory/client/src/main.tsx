@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <QueryClientProvider client={queryClient}>
             <TonConnectUIProvider manifestUrl="https://quyx.xyz/manifest/tonconnect.json">
                 <QuyxProvider
-                    pk="pk_TLY9M6N0NF0J1L81I9114TXGS"
+                    pk={import.meta.env.VITE_QUYX_PK}
                     credentialFormat={[
                         {
                             label: 'name',
