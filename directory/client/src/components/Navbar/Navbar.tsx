@@ -1,4 +1,4 @@
-import { ConnectBtn, useUser } from '@quyx/ui-react';
+import { ConnectBtn, useCredential, useUser } from '@quyx/ui-react';
 import { IconMenu2, IconUser } from '@tabler/icons-react';
 import { Address } from 'ton-core';
 import { AnchorLink } from '..';
@@ -9,6 +9,7 @@ type Props = {
 
 const Navbar = ({ open }: Props) => {
     const user = useUser();
+    const credential = useCredential();
 
     return (
         <nav className="d-flex align-items-center justify-content-between p-3">
@@ -21,7 +22,7 @@ const Navbar = ({ open }: Props) => {
             <div className="d-flex align-items-center" style={{ gap: '1.2rem' }}>
                 <ConnectBtn />
 
-                {user ? (
+                {user && credential ? (
                     <AnchorLink to={`/user/${Address.parse(user.address)}`}>
                         <IconUser size={26} strokeWidth={1.8} />
                     </AnchorLink>

@@ -1,17 +1,19 @@
 import { useQuery } from '@tanstack/react-query';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Api from '../../shared/api';
 import { IconBrandTelegram } from '@tabler/icons-react';
 import { Loader } from '../../components';
 
 const User = () => {
     const { address } = useParams() as { address: string };
+    const navigate = useNavigate();
 
     const { isPending, data } = useQuery({
         queryKey: [address],
         queryFn: async function () {
             const client = new Api();
             const user = await client.getUser(address);
+            if (!user) navigate('/', { replace: true });
 
             return user?.payload.vc.credentialSubject;
         },

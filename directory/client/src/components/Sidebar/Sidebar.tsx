@@ -106,7 +106,7 @@ const Sidebar = ({ state, close }: Props) => {
                 <div className="top">
                     <div>
                         <h2>Directory</h2>
-                        <p>Search directory of {total ? total : <Loader size={13} />} users</p>
+                        <p>Search directory of {total ?? <Loader size={13} />} users</p>
                     </div>
 
                     <form action="#">

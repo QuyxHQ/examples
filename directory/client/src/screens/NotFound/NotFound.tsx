@@ -1,5 +1,11 @@
+import { useEffect } from 'react';
+
 const NotFound = () => {
-    return <div>NotFound</div>;
+    useEffect(() => {
+        window.location.href = '/';
+    }, []);
+
+    return null;
 };
 
 export default NotFound;
