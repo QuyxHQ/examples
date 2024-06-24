@@ -16,7 +16,7 @@ const queryClient = new QueryClient({
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <QueryClientProvider client={queryClient}>
-            <TonConnectUIProvider manifestUrl="https://quyx.xyz/manifest/tonconnect.json">
+            <TonConnectUIProvider manifestUrl="https://directory.quyx.xyz/manifest/tonconnect.json">
                 <QuyxProvider
                     pk={import.meta.env.VITE_QUYX_PK}
                     credentialFormat={[
