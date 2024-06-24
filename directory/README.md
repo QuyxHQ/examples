@@ -21,7 +21,7 @@ Change your directory to your target directory i.e. either `client` or `server`
 Then install the dependencies:
 
 ```bash
-npm install # or any other command for the particular language
+npm install
 ```
 
 ### Technologies Used
@@ -37,7 +37,7 @@ Change your directory to your target directory i.e. either `client` or `server`
 Run the following command to run the app locally:
 
 ```bash
-npm run dev # or any other suitable command
+npm run dev
 ```
 
 ### Building for production
@@ -45,7 +45,7 @@ npm run dev # or any other suitable command
 Change your directory to your target directory i.e. either `client` or `server`
 
 ```bash
-npm run build # or any other suitable command
+npm run build
 ```
 
 ### Resources
