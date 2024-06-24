@@ -125,7 +125,7 @@ a {
     margin-left: 1.2rem;
 }
 
-.sidebar .main .item .user:last-child {
+.sidebar .main .item .user:last-child a {
     border-bottom: none;
 }
 
@@ -133,6 +133,7 @@ a {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
+    background-color: #eee;
 }
 
 .sidebar .main .item .user a > div {

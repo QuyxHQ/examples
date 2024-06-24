@@ -1,5 +1,5 @@
 import { ConnectBtn, useCredential, useUser } from '@quyx/ui-react';
-import { IconMenu2, IconUser } from '@tabler/icons-react';
+import { IconHome, IconMenu2, IconUser } from '@tabler/icons-react';
 import { Address } from 'ton-core';
 import { AnchorLink } from '..';
 
@@ -24,9 +24,13 @@ const Navbar = ({ open }: Props) => {
 
                 {user && credential ? (
                     <AnchorLink to={`/user/${Address.parse(user.address)}`}>
-                        <IconUser size={26} strokeWidth={1.8} />
+                        <IconUser size={26} strokeWidth={1.5} />
                     </AnchorLink>
                 ) : null}
+
+                <AnchorLink to="/">
+                    <IconHome size={26} strokeWidth={1.5} />
+                </AnchorLink>
             </div>
         </nav>
     );
