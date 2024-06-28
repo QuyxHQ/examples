@@ -2,24 +2,25 @@
     "name": "server",
     "version": "1.0.0",
     "description": "",
-    "main": "server.js",
+    "main": "index.js",
     "scripts": {
-        "dev": "vercel dev"
+        "start": "node index.js",
+        "build": "npm install"
+    },
+    "engines": {
+        "node": "20.x"
     },
     "keywords": [],
-    "author": "",
+    "author": "Morifeoluwa Adedeji",
     "license": "ISC",
     "dependencies": {
         "@quyx/ts": "^1.2.0",
         "cors": "^2.8.5",
+        "express": "^4.19.2",
+        "helmet": "^7.1.0",
         "lodash": "^4.17.21"
     },
     "devDependencies": {
-        "@types/cors": "^2.8.17",
-        "@types/lodash": "^4.17.5",
-        "@types/node": "^20.14.8",
-        "@vercel/node": "^3.2.0",
-        "dotenv": "^16.4.5",
-        "typescript": "^5.5.2"
+        "dotenv": "^16.4.5"
     }
 }
